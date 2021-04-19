@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background: rgb(24, 24, 24);
+}
+
+canvas {
+    display: block;  /* prevents scrollbar */
+    width: 100%;
+    height: 100%;
+}
+
+/* Menu CSS */
+button{
+    font-size: 18px;
+    font-weight: 700;
+    color: rgb(170, 170, 170);
+    text-transform: uppercase;
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline: none;
+    height: 30px;
+    width: 150px;
+    background-color: #3d4f5e;
+    border: 2px solid rgb(5, 5, 5);
+}
+
+button:hover {
+  color: rgb(20, 20, 20);
+  background-color: #454545;
+}
+
+button:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.menu-item{
+  font-size: 18px;
+  font-weight: 700;
+  color: rgb(170, 170, 170);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border: 2px solid rgb(5, 5, 5);
+  border-top-style: none;
+}
+
+#dropdown-menu{
+    position: absolute;
+    left: 0;
+    top: 30px;
+    width: 150px;
+    background-color: #3d4f5e;
+  }
+
+/* Loading Screen CSS */
+  #loading-container{
+    z-index: 2; /*z-index puts this on top*/
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url(./Extras/Background_Gradient.svg);
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .loading {
+    display: flex;
+    flex-direction: row;
+  }
+  .loading{
+    font-size: 88px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #141414;
+  }
+  .loading:after {
+    content: "...";
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: bottom;
+    animation: ellipsis-dot 1s infinite .3s;
+    animation-fill-mode: fowards;
+    width: 1.25em;
+  }
+  
+  @keyframes ellipsis-dot {
+    25% {content: "";}
+    50% {content: ".";}
+    75% {content: "..";}
+    100% {content: "...";}
+  }
+    
+  @-webkit-keyframes ellipsis-dot {
+    25% {content: "";}
+    50% {content: ".";}
+    75% {content: "..";}
+    100% {content: "...";}
+  }
+  
+  @media (max-width: 700px) {
+    .loading{font-size: 50px;}
+  }
+  
+  @media (max-width: 340px) {
+   .loading {font-size: 30px;}
+  }

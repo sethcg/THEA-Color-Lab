@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <meta name = "viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--reference to the stylesheet-->
+        <link rel="stylesheet" type="text/css" href="./styles.css"/>
+
+        <title> 3D Model and Lights </title>
+    </head>
+
+    <body>
+        <!--Loading Screen-->
+        <div id = "loading-container">
+            <div class = "loading"> Loading </div>
+        </div>
+
+        <!--demo id is called upon by script.js to create the color demo-->
+        <canvas id = "demo"></canvas>
+            <div class = "dropdown-wrapper">
+              <button onclick = "menu_toggle()"> Color Menu </button>
+                <div class="Grid" id = "dropdown-menu">
+                    <div class = "menu-item" id = "boxPickerRight"> Actor's Left </div>
+                    <div class = "menu-item" id = "boxPickerLeft"> Actor's Right </div>
+                    <div class = "menu-item" id = "boxPickerBack"> Back Light </div>
+                </div>
+            </div>
+    </body>
+    <script>
+        function menu_toggle() {
+          var x = document.getElementById("dropdown-menu");
+          if (x.style.display === "none") {
+            x.style.display = "block";
+          } else {
+            x.style.display = "none";
+          }
+        }
+        </script>
+
+
+    <!--main script-->
+    <script type = "module" src = "script.js"></script>
+
+
+</html>
