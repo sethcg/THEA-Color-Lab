@@ -1,7 +1,7 @@
 # THEA-Color-Lab
 ## Description
 
-THEA-Color-Lab is a small two week project meant to further my understanding of javascript, HTML, and CSS.
+THEA-Color-Lab is a small project meant to further my understanding of javascript, HTML, and CSS.
 
 ![Demo](https://i.imgur.com/qhFD7ar.gif)
 
